@@ -189,7 +189,10 @@ inside example/annotation/SE.gff3 for example:
 (1) gene label holds different alternative events happened
     in different or the same genes. The event ID is created
     as combination of Ensembl gene ID, alternative event
-    type, and ordinal number beginning from zero.
+    type, and ordinal number beginning from zero. In this
+    example, in the 9th column a unique "ID" for GFF3 is
+    created as "gene:ENSMUSG00000005364.SE.0". The "name"
+    and "gid" labels hold the original Ensembl gene ID.
 
 ```
 chr6	SE	gene	106715619	106731931	.	-	.	ID=gene:ENSMUSG00000005364.SE.0;Name=gene:ENSMUSG00000005364;gid=gene:ENSMUSG00000005364
@@ -197,17 +200,35 @@ chr6	SE	gene	106715619	106731931	.	-	.	ID=gene:ENSMUSG00000005364.SE.0;Name=gene
 
 (2) mRNA labels separate inclusion form from exclusion form.
     Inclusion form is labeled as A, while exclusion form is B.
+    In this case, the inclusion forms of SE under gene:ENSMUSG00000005364
+    are ENSMUST00000167925 and ENSMUST00000204659, while the 
+    exclusion form is ENSMUST00000205004. In the 9th column,
+    CATANA creates a unique "ID" in GFF3 for inclusion as
+    "gene:ENSMUSG00000005364.SE.0.A". The "Parent" holds the
+    parental ID under this hierarchical structure, so here
+    is "gene:ENSMUSG00000005364.SE.0" same as the "ID" in gene
+    label. The "gid" stores the Ensembl gene ID. The "tid" is
+    merged transcript IDs of the two inclusion forms as
+    "transcript:ENSMUST00000167925,transcript:ENSMUST00000204659"
+    separated by comma symbol.
 
 ```
 chr6	SE	mRNA	106715619	106731931	.	-	.	ID=gene:ENSMUSG00000005364.SE.0.A;Parent=gene:ENSMUSG00000005364.SE.0;gid=gene:ENSMUSG00000005364;tid=transcript:ENSMUST00000167925,transcript:ENSMUST00000204659
 ```
 
 (3) exon labels hold detailed genomic structure of exons,
-    same as normal GFF file did. In addition, for separation
+    same as normal GFF3 file did. In addition, for separation
     of each exon, the exon ID is starting from "up" for
     upstream (5’ directional) shared exon, ordinal numbers
-    for variable exons, and "dn" for downstream (3’
-    directional) shared exon.
+    for variable exons, and "dn" for downstream (3’ directional)
+    shared exon. Because GFF3 requires gene structure been
+    reported by genome coordination rather than 5' to 3' direction,
+    In this case the first reported exon is the 3' exon, which
+    has "ID" as "gene:ENSMUSG00000005364.SE.0.A.dn". The "Parent"
+    holds the parental mRNA lable ID as "gene:ENSMUSG00000005364.SE.0.A".
+    The "gid" holds the Ensembl gene ID. The "tid" stores the
+    combination of the two inclusion forms transcript ID as
+    "transcript:ENSMUST00000167925,transcript:ENSMUST00000204659".
 
 ```
 chr6	SE	exon	106715619	106715703	.	-	.	ID=gene:ENSMUSG00000005364.SE.0.A.dn;Parent=gene:ENSMUSG00000005364.SE.0.A;gid=gene:ENSMUSG00000005364;tid=transcript:ENSMUST00000167925,transcript:ENSMUST00000204659
