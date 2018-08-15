@@ -140,10 +140,14 @@ perl CATANA.pl -i example/ENSMUSG00000005364.gff3 -o example/annotation -f gff -
 ```
 
 This command tells CATANA to:
+
 (1) use file example/ENSMUSG00000005364.gff3 as input file
+
 (2) create a folder named example/annotation and put
     alternative annotation files under the folder
+
 (3) the format of input file is GFF
+
 (4) dump the processing information into the file named
     example/annotation/annotation.log
 
