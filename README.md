@@ -215,5 +215,7 @@ chr6	SE	exon	106716697	106716790	.	-	.	ID=gene:ENSMUSG00000005364.SE.0.A.SE1;Par
 chr6	SE	exon	106731793	106731931	.	-	.	ID=gene:ENSMUSG00000005364.SE.0.A.up;Parent=gene:ENSMUSG00000005364.SE.0.A;gid=gene:ENSMUSG00000005364;tid=transcript:ENSMUST00000167925,transcript:ENSMUST00000204659
 ```
 
+![ENSMUSG00000005364](https://github.com/shiauck/CATANA/blob/master/example/ENSMUSG00000005364.png)
+
 Note: The format design is following MISO.
 
