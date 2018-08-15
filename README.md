@@ -118,7 +118,7 @@ folder named 'manually_created_alternative_events'.
 We selected a gene ENSMUSG00000005364 as an example for
 illustration of CATANA workflow. The gene structure stored
 in GFF3 format was extracted from Ensembl mouse v90 annotation.
-The file could be found at example/ENSMUSG00000005364.gff3
+The file could be found at example/ENSMUSG00000005364.gff3 (https://github.com/shiauck/CATANA/blob/master/example/ENSMUSG00000005364.gff3)
 
 From IGV, the snapshot of the gene structure:
 ![ENSMUSG00000005364](https://github.com/shiauck/CATANA/blob/master/example/ENSMUSG00000005364.png)
@@ -145,7 +145,7 @@ This command tells CATANA to:
 (2) create a folder named example/annotation and put
     alternative annotation files under the folder
 
-(3) the input file is in GFF format
+(3) the input file is in GFF/GFF3 format
 
 (4) dump the processing information into the file named
     example/annotation/annotation.log
