@@ -241,3 +241,35 @@ chr6	SE	exon	106731793	106731931	.	-	.	ID=gene:ENSMUSG00000005364.SE.0.A.up;Pare
 
 - Note: The format design is following MISO.
 
+- The log file
+
+In addition to standard output GFF3 files, CATANA also provides
+a summary file when invoking "-l" parameter. In the example
+"example/annotation/annotation.log" file, the first few lines
+look like:
+
+```
+CMD: CATANA.pl -i example/ENSMUSG00000005364.gff3 -o /home/shiauck/test/annotation_ENSMUSG00000005364 -f gff3 -l /home/shiauck/test/annotation_ENSMUSG00000005364/annotation.log
+Timp stamp: Wed Aug 15 10:46:37 2018
+
+Total gene number: 1
+
+gene:ENSMUSG00000005364.AFE.0	transcript:ENSMUST00000167925	transcript:ENSMUST00000205004	AFE	201000100	-
+gene:ENSMUSG00000005364.AFE.1	transcript:ENSMUST00000204659	transcript:ENSMUST00000167925	AFE	2010110	-
+gene:ENSMUSG00000005364.ATSS.0	transcript:ENSMUST00000167925	transcript:ENSMUST00000205004	ATSS	201000100	-
+gene:ENSMUSG00000005364.ATSS.1	transcript:ENSMUST00000204659	transcript:ENSMUST00000167925	ATSS	2010110	-
+gene:ENSMUSG00000005364.ATSS.2	transcript:ENSMUST00000204659	transcript:ENSMUST00000205004	ATSS	210	-
+gene:ENSMUSG00000005364.ATTS.0 transcript:ENSMUST00000204659 transcript:ENSMUST00000205004 ATTS 012 -
+```
+
+CATANA reports the running parameters, time stamp, and the
+number of genes CATANA detected. Then CATANA reports a
+tab-delimited tabular summary form for quick tracking.
+The schema of the form:
+(1) gene name
+(2) transcript ID(s) of inclusion isoform
+(3) transcript ID(s) of exclusion isoform
+(4) alternative event type
+(5) exon usage pattern
+(6) strand
+
