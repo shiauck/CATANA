@@ -119,6 +119,7 @@ We selected a gene ENSMUSG00000005364 as an example for
 illustration of CATANA workflow. The gene structure stored
 in GFF3 format was extracted from Ensembl mouse v90 annotation.
 The file could be found at example/ENSMUSG00000005364.gff3
+
 From IGV, the snapshot of the gene structure:
 ![ENSMUSG00000005364](https://github.com/shiauck/CATANA/blob/master/example/ENSMUSG00000005364.png)
 
