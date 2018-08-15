@@ -41,7 +41,7 @@ https://www.perl.org/get.html
 ```
 
 This is the only one required parameter for CATANA. The
-gene annotation stored in GTF/GFF3 format will be parsed.
+gene annotation stored in GTF/GFF format will be parsed.
 CATANA will automatically recognize which format it is to
 prevent manual error.
 
@@ -145,7 +145,7 @@ This command tells CATANA to:
 (2) create a folder named example/annotation and put
     alternative annotation files under the folder
 
-(3) the format of input file is GFF
+(3) the input file is in GFF format
 
 (4) dump the processing information into the file named
     example/annotation/annotation.log
@@ -180,18 +180,19 @@ Total gene number: 1
 1 of 1 (100.00%)
 ```
 
-- The format of result GFF3
+- The format of result GFF
 
 CATANA separates alternative events by three hierarchical
 labels, including gene, mRNA, and exon. The details are
 listed in the following as well as the inclusion form part
-inside example/annotation/SE.gff3 for example:
+inside example/annotation/SE.gff (https://github.com/shiauck/CATANA/blob/master/example/annotation/SE.gff)
+for example:
 
 (1) gene label holds different alternative events happened
     in different or the same genes. The event ID is created
     as combination of Ensembl gene ID, alternative event
     type, and ordinal number beginning from zero. In this
-    example, in the 9th column a unique "ID" for GFF3 is
+    example, in the 9th column a unique "ID" for GFF is
     created as "gene:ENSMUSG00000005364.SE.0". The "name"
     and "gid" labels hold the original Ensembl gene ID.
 
@@ -244,9 +245,9 @@ chr6	SE	exon	106731793	106731931	.	-	.	ID=gene:ENSMUSG00000005364.SE.0.A.up;Pare
 - The log file
 
 In addition to standard output GFF3 files, CATANA also provides
-a summary file when invoking "-l" parameter. In the example
-"example/annotation/annotation.log" file, the first few lines
-look like:
+a summary file when invoking "-l" parameter. In the example log file
+"example/annotation/annotation.log" (https://github.com/shiauck/CATANA/blob/master/example/annotation/annotation.log)
+, the first few lines look like:
 
 ```
 CMD: CATANA.pl -i example/ENSMUSG00000005364.gff3 -o /home/shiauck/test/annotation_ENSMUSG00000005364 -f gff3 -l /home/shiauck/test/annotation_ENSMUSG00000005364/annotation.log
