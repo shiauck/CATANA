@@ -1,6 +1,6 @@
 # README for CATANA (v1.0)
 
-Time-stamp: <2018-08-16 15:45:34 Cheng-Kai Shiau>
+Time-stamp: <2018-08-16 Cheng-Kai Shiau>
 
 ## Introduction
 
