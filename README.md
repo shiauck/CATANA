@@ -1,8 +1,8 @@
 # README for CATANA (v1.0)
 
-Time-stamp: <2018-08-16 Cheng-Kai Shiau>
+Time-stamp: <2018-08-15 Cheng-Kai Shiau>
 
-## Introduction
+### Introduction
 
 In higher eukaryotes, the generation of RNA isoforms,
 including alternative splicing events (AS) and alternative
@@ -15,7 +15,7 @@ named Comprehensive Alternative Transcripts Atlas based oN
 Annotation (CATANA) to identify all 10 known AS and AT
 events.
 
-## Installation
+### Installation
 
 The only one requirement is Perl 5.8 or later version.
 Additional packages, modules, or dependency are Not required!
@@ -23,7 +23,7 @@ Additional packages, modules, or dependency are Not required!
 Please check the following website for installation of Perl:
 https://www.perl.org/get.html
 
-## Usage of CATANA
+### Usage of CATANA
 
 ```
 
@@ -34,7 +34,7 @@ https://www.perl.org/get.html
                  [-d] <Debug message, optional>
 ```
 
-### Options
+> Options
 
 ```
 -i/--infile FILENAME
@@ -81,7 +81,7 @@ This is optional parameter. By default, the debug message
 is turned off. Set this parameter to 1 to dump out debug
 message.
 
-## Example
+### Example
 
 ```
 perl CATANA.pl -i manually_created_alternative_events/simulated_SE.gff3 -l test.txt
@@ -93,20 +93,18 @@ exon example GFF3 contained under folder named
 than given output folder name, and then dump processing log
 into file named 'test.txt'.
 
-## Supplementary tools under CATANA
+### Supplementary tools under CATANA
 
 There are two tools under CATANA folder. One is named
 'counting_gene_IDs.sh', and the other one is GFF3 simulator.
 
-counting_gene_IDs.sh
-------
+> counting_gene_IDs.sh
 
 'counting_gene_IDs.sh' is a BASH shell script using 'awk'
 to calculate the number of unique gene names under the
 given output folder.
 
-GFF3 simulator
-------
+> GFF3 simulator
 
 GFF3 simulator is separated into 10 short R scripts. Each
 R script is used to simulate a specific AS or AT event.
@@ -115,7 +113,7 @@ with their graphic gene models shown by IGV. All the R
 scripts, simulated GFF files and figures are stored under
 folder named 'manually_created_alternative_events'.
 
-## Tutorial
+### Tutorial
 
 We selected a gene ENSMUSG00000005364 as an example for
 illustration of CATANA workflow. The gene structure stored
@@ -130,7 +128,7 @@ alternative events. Of note, the gene is at negative strand
 so that the ATSS and AFE should be at the right-hand side
 of the figure and ATTS should be at the left-hand side.
 
-### How to use CATANA
+> How to use CATANA
 
 To use CATANA for annotating alternative events, please use
 the following command:
@@ -179,7 +177,7 @@ Total gene number: 1
 1 of 1 (100.00%)
 ```
 
-### The format of result GFF3
+> The format of result GFF3
 
 CATANA separates alternative events by three hierarchical
 labels, including gene, mRNA, and exon. The details are
